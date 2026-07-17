@@ -1,0 +1,160 @@
+What is AWS?
+
+AWS stands for:
+
+Amazon Web Services
+
+It is a cloud platform developed by Amazon.
+
+AWS provides more than 200 cloud services.
+
+Some popular services:
+
+EC2
+S3
+IAM
+VPC
+RDS
+Lambda
+EKS
+ECS
+CloudWatch
+Route53
+Why Do Companies Use AWS?
+
+Suppose Flipkart gets huge traffic during Diwali.
+
+Instead of buying 1000 servers,
+
+They simply launch more EC2 instances.
+
+After Diwali,
+
+they stop those instances.
+
+They pay only for the days they used them.
+
+Advantages of AWS
+1. Pay as You Go
+
+Pay only for what you use.
+
+Example:
+
+Renting a bike.
+
+You pay only for the hours you ride it.
+
+2. Highly Available
+
+AWS has data centers around the world.
+
+If one server fails,
+
+another server continues serving users.
+
+3. Scalable
+
+Need more servers?
+
+Launch them in minutes.
+
+Need fewer servers?
+
+Stop them.
+
+4. Secure
+
+AWS provides:
+
+IAM
+Security Groups
+Encryption
+Firewalls
+Monitoring
+5. Global
+
+AWS is available in many countries.
+
+Users connect to the nearest AWS data center.
+
+Types of Cloud
+1. Public Cloud
+
+Owned by a cloud provider.
+
+Example:
+
+AWS
+Azure
+Google Cloud
+
+Anyone can create an account.
+
+2. Private Cloud
+
+Owned by a single company.
+
+Example:
+
+A bank runs its own cloud inside its own data center.
+
+Only employees can use it.
+
+3. Hybrid Cloud
+
+Combination of:
+
+Public Cloud
+Private Cloud
+
+Example:
+
+Customer data stays in the private cloud.
+
+Web application runs on AWS.
+
+Cloud Service Models
+1. IaaS (Infrastructure as a Service)
+
+AWS provides:
+
+Virtual Machines
+Storage
+Network
+
+You manage:
+
+OS
+Applications
+Software
+
+Example:
+
+EC2
+
+2. PaaS (Platform as a Service)
+
+AWS manages:
+
+Servers
+OS
+Runtime
+
+You only deploy your application.
+
+Example:
+
+Elastic Beanstalk
+
+3. SaaS (Software as a Service)
+
+Everything is managed by the provider.
+
+Examples:
+
+Gmail
+Zoom
+Microsoft 365
+
+You simply use the application.
