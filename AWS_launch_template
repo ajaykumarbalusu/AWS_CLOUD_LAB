@@ -1,0 +1,53 @@
+AWS Launch Template
+What is a Launch Template?
+
+A Launch Template is a saved configuration used to launch EC2 instances.
+
+Instead of selecting the same settings every time, AWS stores them in a template.
+
+Real-Life Example
+
+Imagine you order the same pizza every Friday.
+
+Instead of choosing toppings every time, you save it as a favorite order.
+
+Next time, you order with one click.
+
+👉 A Launch Template works the same way for EC2.
+
+What Does a Launch Template Store?
+AMI (Operating System)
+Instance Type
+Key Pair
+Security Group
+Storage (EBS)
+User Data (Startup Script)
+Network Settings
+Why Do We Use It?
+Saves time
+Avoids configuration mistakes
+Ensures all EC2 instances have the same settings
+Used by Auto Scaling Groups (ASG) to launch new EC2 instances automatically
+Real-Time Example
+
+Suppose your company needs 10 web servers.
+
+Instead of configuring each EC2 manually:
+
+Create one Launch Template
+Launch all 10 EC2 instances using that template
+
+All instances will have the same configuration.
+
+Interview Question
+
+Q: What is a Launch Template?
+
+Answer:
+A Launch Template is a reusable configuration that contains the settings required to launch EC2 instances, such as AMI, instance type, key pair, security group, and storage. It is commonly used with Auto Scaling Groups to launch consistent EC2 instances.
+
+Easy Way to Remember
+
+Launch Template = Blueprint for EC2 Instances
+
+Just like a house blueprint is used to build multiple identical houses, a Launch Template is used to launch multiple EC2 instances with the same configuration.
