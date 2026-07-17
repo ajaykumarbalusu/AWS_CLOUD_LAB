@@ -1,0 +1,131 @@
+What is EC2?
+
+EC2 stands for Elastic Compute Cloud.
+
+It is a virtual server in AWS.
+
+Simple Definition
+
+EC2 is a virtual computer (server) that AWS provides over the internet.
+
+Instead of buying a physical server, AWS gives you a virtual server that you can use whenever you need.
+
+                Users
+                  │
+                  ▼
+            Internet
+                  │
+                  ▼
+          Public IP Address
+                  │
+                  ▼
+           EC2 Instance
+        (Amazon Linux)
+                  │
+        ┌─────────┴─────────┐
+        │                   │
+     Docker             Jenkins
+        │                   │
+        ▼                   ▼
+   Web Application      CI/CD Pipeline
+
+
+Main Components of EC2
+
+When creating an EC2 instance, you'll see several options.
+
+Let's understand each one.
+
+1. AMI (Amazon Machine Image)
+
+Think of it as the operating system template.
+
+Examples:
+
+Amazon Linux
+Ubuntu
+Red Hat
+Windows Server
+
+Analogy: Buying a new laptop and choosing whether you want Windows or Ubuntu installed.
+
+2. Instance Type
+
+This defines the server's hardware.
+
+Example:
+
+Instance Type	CPU	Memory
+t2.micro	1 vCPU	1 GB
+t3.micro	2 vCPU	1 GB
+t3.small	2 vCPU	2 GB
+
+Analogy: Choosing a laptop with different RAM and processor configurations.
+
+3. Key Pair
+
+A Key Pair is used to securely connect to your EC2 instance.
+
+It has two parts:
+
+Public Key → Stored by AWS on the EC2 instance.
+Private Key (.pem file) → Downloaded by you.
+
+Without the private key, you cannot SSH into the server (unless you've configured another access method).
+
+Analogy: A house lock and its unique key.
+
+4. Security Group
+
+A Security Group acts like a firewall.
+
+It controls:
+
+Who can connect to your server.
+Which ports are open.
+
+Example:
+
+Port	Purpose
+22	SSH
+80	HTTP
+443	HTTPS
+8080	Tomcat
+8081	Jenkins
+
+Analogy: The security guard at an apartment deciding who can enter.
+
+5. Storage (EBS)
+
+Every server needs a hard disk.
+
+AWS provides an Elastic Block Store (EBS) volume.
+
+Example:
+
+8 GB
+20 GB
+100 GB
+
+Analogy: The SSD or hard disk in your laptop.
+
+6. Public IP
+
+If you want to connect to the server from your laptop, AWS assigns a Public IP Address.
+
+
+Launch Instance
+       │
+       ▼
+Running
+       │
+ ┌─────┴─────┐
+ │           │
+ ▼           ▼
+Stop     Reboot
+ │
+ ▼
+Start
+ │
+ ▼
+Terminate
