@@ -1,0 +1,123 @@
+Elastic Load Balancer (ELB)
+
+What is an Elastic Load Balancer?
+
+An Elastic Load Balancer (ELB) is an AWS service that distributes incoming traffic across multiple EC2 instances.
+
+This helps improve availability, performance, and reliability.
+
+Real-Life Example
+
+Imagine a supermarket with 4 billing counters.
+
+If all customers stand at one counter, it becomes slow.
+
+Instead, a staff member directs customers to different counters.
+
+👉 That staff member is like an Elastic Load Balancer.
+
+Why Do We Use ELB?
+Distributes traffic across multiple servers.
+Prevents a single server from becoming overloaded.
+Improves application availability.
+Automatically sends traffic only to healthy EC2 instances.
+How ELB Works
+Users
+   │
+   ▼
+Load Balancer
+   │
+ ┌─┴─────────┐
+ ▼           ▼
+EC2-1      EC2-2
+
+The Load Balancer receives requests and forwards them to available EC2 instances.
+
+Types of Load Balancers
+Application Load Balancer (ALB) → For HTTP/HTTPS web applications (Layer 7).
+Network Load Balancer (NLB) → For high-performance TCP/UDP traffic (Layer 4).
+Gateway Load Balancer (GWLB) → Used with virtual network appliances like firewalls.
+Interview Question
+
+Q: What is an Elastic Load Balancer?
+
+Answer:
+An Elastic Load Balancer (ELB) is an AWS service that automatically distributes incoming application traffic across multiple EC2 instances, improving availability, scalability, and fault tolerance.
+
+Easy Way to Remember
+
+ELB = Traffic Manager
+
+Just like a traffic police officer directs vehicles to different roads to avoid traffic jams, an Elastic Load Balancer directs user requests to different EC2 instances so that no single server becomes overloaded.
+
+
+
+the 3 types of Elastic Load Balancers in a very simple and easy-to-remember way.
+
+1. Application Load Balancer (ALB)
+What is it?
+
+ALB distributes HTTP and HTTPS web traffic to multiple EC2 instances.
+
+Used For
+Websites
+Web Applications
+APIs
+Example
+
+Suppose you open:
+
+www.amazon.com
+
+The ALB receives your request and sends it to one of the available web servers.
+
+Easy to Remember:
+
+ALB = Web Traffic (HTTP/HTTPS)
+
+2. Network Load Balancer (NLB)
+What is it?
+
+NLB distributes TCP, UDP, and TLS traffic.
+
+It is designed for very high speed and low latency applications.
+
+Used For
+Gaming applications
+Banking applications
+Video streaming
+Real-time applications
+Example
+
+A bank processes thousands of transactions every second.
+
+NLB handles this traffic quickly with very low delay.
+
+Easy to Remember:
+
+NLB = Fast Network Traffic
+
+3. Gateway Load Balancer (GWLB)
+What is it?
+
+GWLB distributes traffic to security appliances such as firewalls and intrusion detection systems.
+
+Used For
+Firewalls
+Security inspection
+Network monitoring
+Example
+
+Before traffic reaches your EC2 instance, it passes through a firewall to check for malicious requests.
+
+GWLB sends traffic to the firewall first.
+
+Easy to Remember:
+
+GWLB = Security Traffic
+
+Quick Revision Table
+Load Balancer	Used For	Easy Keyword
+ALB	Websites & APIs (HTTP/HTTPS)	🌐 Web
+NLB	High-speed TCP/UDP traffic	⚡ Fast Network
+GWLB	Firewalls & Security Appliances	🔒 Security
