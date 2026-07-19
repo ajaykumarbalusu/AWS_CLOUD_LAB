@@ -1,0 +1,89 @@
+Auto Scaling Group (ASG)
+What is Auto Scaling Group?
+
+An Auto Scaling Group (ASG) is an AWS service that automatically adds or removes EC2 instances based on application traffic.
+
+Its main goal is to keep your application available while reducing unnecessary costs.
+
+Real-Life Example
+
+Imagine a restaurant.
+
+On weekdays, 2 employees are enough.
+On weekends, more customers arrive, so the manager calls 3 more employees.
+When customers leave, those extra employees go home.
+
+👉 ASG works the same way with EC2 instances.
+
+Why Do We Use ASG?
+Automatically adds EC2 instances when traffic increases.
+Automatically removes EC2 instances when traffic decreases.
+Keeps the application running if an EC2 instance fails.
+Saves money by running only the required number of servers.
+How ASG Works
+Users
+   │
+   ▼
+Load Balancer
+   │
+   ▼
+Auto Scaling Group
+   │
+ ┌─┴─────────────┐
+ ▼               ▼
+EC2-1         EC2-2
+
+(Traffic Increases)
+
+ASG Automatically Launches
+
+EC2-3
+EC2-4
+ASG Settings
+Minimum Capacity
+
+The minimum number of EC2 instances that should always be running.
+
+Example: 2
+
+Desired Capacity
+
+The number of EC2 instances you want running under normal conditions.
+
+Example: 3
+
+Maximum Capacity
+
+The maximum number of EC2 instances ASG can launch.
+
+Example: 10
+
+Interview Question
+
+Q: What is an Auto Scaling Group?
+
+Answer:
+An Auto Scaling Group (ASG) is an AWS service that automatically increases or decreases the number of EC2 instances based on application demand, ensuring high availability and cost optimization.
+
+Easy Way to Remember
+
+ASG = Automatic EC2 Manager
+
+Just like a restaurant manager adds more staff when customers increase and sends them home when business is slow, ASG automatically adds or removes EC2 instances based on traffic.
+
+Interview Tip
+
+Remember this simple relationship:
+
+Launch Template
+       │
+       ▼
+Auto Scaling Group (ASG)
+       │
+       ▼
+Elastic Load Balancer (ELB)
+Launch Template → Defines how to create an EC2 instance.
+ASG → Decides how many EC2 instances should run.
+ELB → Distributes traffic among those EC2 instances.
+
+This is a very common interview question for AWS and DevOps roles.
