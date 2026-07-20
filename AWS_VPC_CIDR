@@ -1,0 +1,153 @@
+VPC (Virtual Private Cloud)
+What is a VPC?
+
+A VPC (Virtual Private Cloud) is your private network in AWS.
+
+It allows you to securely launch and manage AWS resources like EC2, RDS, and Load Balancers.
+
+Real-Life Example
+
+Imagine an apartment.
+
+The apartment is surrounded by a compound wall.
+Only residents and authorized visitors can enter.
+
+👉 Similarly, a VPC is your private network, where only your AWS resources can communicate securely.
+
+Why Do We Use VPC?
+Creates a private and secure network.
+Controls who can access your resources.
+Organizes AWS resources into different networks.
+Improves security.
+VPC Architecture
+                VPC (10.0.0.0/16)
+       ┌─────────────────────────────┐
+       │                             │
+       │   Public Subnet             │
+       │   EC2 + Load Balancer        │
+       │                             │
+       │   Private Subnet            │
+       │   Database (RDS)            │
+       │                             │
+       └─────────────────────────────┘
+Components of a VPC
+Subnet → Divides the VPC into smaller networks.
+Internet Gateway (IGW) → Provides internet access.
+Route Table → Decides where network traffic should go.
+Security Group → Instance-level firewall.
+Network ACL (NACL) → Subnet-level firewall.
+Types of Subnets
+Public Subnet
+Has internet access.
+Used for:
+EC2 Web Servers
+Load Balancers
+Bastion Hosts
+
+Easy to Remember:
+
+Public Subnet = Internet Accessible
+
+Private Subnet
+No direct internet access.
+Used for:
+Databases (RDS)
+Application Servers
+Backend Services
+
+Easy to Remember:
+
+Private Subnet = Internal Resources
+
+Interview Question
+
+Q: What is a VPC?
+
+Answer:
+A VPC (Virtual Private Cloud) is a logically isolated private network in AWS where you can securely launch and manage AWS resources like EC2, RDS, and Load Balancers.
+
+Easy Way to Remember
+
+VPC = Your Private Network in AWS
+
+Just like your home compound protects everything inside it, a VPC protects all your AWS resources.
+
+One-Line Revision
+VPC → Private Network 🏠
+Public Subnet → Internet Access 🌍
+Private Subnet → No Internet 🔒
+Internet Gateway → Connects VPC to the Internet 🌐
+Route Table → Decides Traffic Path 🛣️
+Security Group → EC2 Firewall 🛡️
+NACL → Subnet Firewall 🚧
+🎯 Interview Tip
+
+A common interview question is:
+
+"Can an EC2 instance in a private subnet access the internet?"
+
+Answer:
+
+Directly: ❌ No
+Using a NAT Gateway: ✅ Yes (for outbound internet access like software updates), but it still cannot receive inbound internet traffic.
+
+This is a very common AWS interview scenario, so remember it well.
+
+
+CIDR (Classless Inter-Domain Routing)
+What is CIDR?
+
+CIDR (Classless Inter-Domain Routing) is a method of defining the IP address range for a network.
+
+In AWS, every VPC and Subnet must have a CIDR block.
+
+Simple Definition
+
+CIDR defines how many IP addresses are available in a network.
+
+Real-Life Example
+
+Imagine a hotel.
+
+The hotel has 100 rooms.
+Room numbers are from 1 to 100.
+
+Here:
+
+Hotel = Network
+Room Numbers = IP Addresses
+
+Similarly, CIDR defines the range of IP addresses available in a network.
+
+CIDR Format
+
+A CIDR block is written as:
+
+Network Address / Prefix
+
+Example:
+
+10.0.0.0/16
+
+Where:
+
+10.0.0.0 → Network Address
+/16 → Prefix Length
+What Does /16 Mean?
+
+The number after / tells us how many bits are reserved for the network.
+
+The remaining bits are used for host (IP) addresses.
+
+Smaller prefix → More IP addresses
+
+Larger prefix → Fewer IP addresses
+
+Common CIDR Blocks
+CIDR	Total IP Addresses	Usable in AWS
+/16	65,536	65,531
+/24	256	251
+/28	16	11
+/32	1	1
+
+Note: AWS reserves 5 IP addresses in every subnet, so the usable IPs are 5 fewer than the total.
