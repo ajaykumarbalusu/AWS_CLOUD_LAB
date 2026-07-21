@@ -1,0 +1,45 @@
+VPC Peering
+What is VPC Peering?
+
+VPC Peering is a connection between two VPCs that allows them to communicate with each other using private IP addresses.
+
+Simple Definition
+
+VPC Peering connects two VPCs so they can communicate securely using private IPs.
+
+
+
+Why Do We Use VPC Peering?
+
+Connect two VPCs securely.
+Share resources between VPCs.
+Communication happens using private IP addresses.
+No need to use the public internet.
+
+How It Works
+      VPC-A                     VPC-B
+  10.0.0.0/16              192.168.0.0/16
+       │                         │
+       └────── VPC Peering ──────┘
+                 │
+        Private Communication
+
+Easy Way to Remember
+
+VPC Peering = Private Bridge Between Two VPCs
+
+Just like a bridge connects two islands, VPC Peering connects two VPCs so they can communicate privately without using the internet.
+
+
+Requirements
+
+Both VPCs must have different (non-overlapping) CIDR blocks.
+Update the Route Tables in both VPCs.
+Accept the VPC Peering request.
+
+Advantages
+
+Secure communication
+Low network latency
+Uses private IP addresses
+No internet required
