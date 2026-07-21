@@ -1,0 +1,167 @@
+Network ACL (NACL)
+
+What is NACL?
+
+Network ACL (Network Access Control List) is a subnet-level firewall that controls inbound and outbound traffic for an entire subnet.
+
+Simple Definition
+
+NACL protects the entire subnet by allowing or denying network traffic.
+
+Real-Life Example
+
+Imagine an apartment.
+
+Apartment Gate → NACL
+Individual House Door → Security Group
+
+The gate decides who can enter the apartment, while the house door decides who can enter the house.
+
+Features
+Works at the Subnet Level.
+Controls both Inbound and Outbound traffic.
+Supports Allow and Deny rules.
+Rules are processed in ascending order (Rule Number).
+It is Stateless.
+What is Stateless?
+
+If you allow inbound traffic, you must also allow outbound traffic.
+
+Example:
+
+Inbound  : Allow Port 22
+Outbound : Allow Port 22
+
+Both rules are required.
+
+Interview Question
+What is the difference between Security Group and NACL?
+Security Group	NACL
+Instance Level	Subnet Level
+Stateful	Stateless
+Only Allow Rules	Allow & Deny Rules
+Easy Way to Remember
+
+NACL = Subnet Firewall
+======================================================================================================================================================
+
+Network Interface (ENI)
+
+What is ENI?
+
+ENI (Elastic Network Interface) is a virtual network card attached to an EC2 instance.
+
+Simple Definition
+
+ENI is the network adapter that allows an EC2 instance to communicate with the network.
+
+Real-Life Example
+
+Think of your laptop.
+
+Your laptop has a Wi-Fi/Ethernet adapter to connect to the internet.
+
+Similarly,
+
+EC2 Instance → ENI → Network
+
+ENI Contains
+Private IP Address
+Elastic IP (Optional)
+MAC Address
+Security Group
+Why Do We Use ENI?
+Connect EC2 to the VPC.
+Assign multiple private IPs.
+Attach or detach ENIs between EC2 instances (same Availability Zone).
+Easy Way to Remember
+
+ENI = Network Card of EC2
+
+===========================================================================================================================================================
+
+Elastic IP Address (EIP)
+What is Elastic IP?
+
+An Elastic IP (EIP) is a static public IPv4 address provided by AWS.
+
+Simple Definition
+
+Elastic IP is a permanent public IP address that you can associate with an EC2 instance.
+
+Why Do We Need Elastic IP?
+
+Normally, when you stop and start an EC2 instance, its public IP changes.
+
+If users or applications connect using the old IP, they will fail.
+
+An Elastic IP solves this problem because it does not change.
+
+Real-Life Example
+
+Imagine your house address changes every week.
+
+Nobody can find your house.
+
+Instead, you keep one permanent address.
+
+That permanent address is like an Elastic IP.
+
+Features
+Static Public IPv4 Address.
+Can be associated with one EC2 instance at a time.
+Can be moved from one EC2 instance to another.
+Remains the same even after the instance is stopped and started.
+
+========================================================================================================================================================
+
+NIC (Network Interface Card)
+
+What is NIC?
+
+A NIC (Network Interface Card) is a hardware or virtual network adapter that allows a computer or server to communicate with a network.
+
+Simple Definition
+
+NIC is a device that connects a computer or server to a network.
+
+Real-Life Example
+
+Think of your laptop.
+
+Without a Wi-Fi card or Ethernet card, it cannot connect to the internet.
+
+That Wi-Fi/Ethernet card is called a NIC.
+
+Similarly,
+
+Laptop → Physical NIC
+AWS EC2 → Virtual NIC (ENI)
+Why Do We Use NIC?
+Connects a server to the network.
+Sends and receives network traffic.
+Provides a MAC Address.
+Enables communication with other devices.
+In AWS
+
+AWS does not use the term NIC directly.
+
+Instead, AWS provides ENI (Elastic Network Interface), which is a virtual NIC.
+
+An ENI contains:
+
+Private IP Address
+Public/Elastic IP (Optional)
+MAC Address
+Security Groups
+Interview Question
+What is NIC?
+
+A Network Interface Card (NIC) is a hardware or virtual network adapter that enables a computer or server to communicate over a network.
+
+Difference Between NIC and ENI
+NIC	ENI
+General networking term	AWS-specific term
+Physical or Virtual	Virtual only
+Used in Computers & Servers	Used in AWS EC2
+Connects to a Network	Connects EC2 to a VPC
