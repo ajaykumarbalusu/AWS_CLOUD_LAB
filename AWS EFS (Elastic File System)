@@ -1,0 +1,81 @@
+AWS EFS (Elastic File System)
+
+
+What is EFS?
+
+EFS (Elastic File System) is a fully managed shared file storage service provided by AWS.
+
+It allows multiple EC2 instances to access the same files at the same time.
+
+
+
+Simple Definition
+
+EFS is a shared storage that can be mounted by multiple EC2 instances simultaneously.
+
+
+
+Real-Life Example
+
+Imagine a Google Drive folder.
+
+Multiple people can access the same folder.
+If one person uploads a file, everyone can see it.
+
+👉 EFS works the same way for EC2 instances.
+
+
+
+
+Why Do We Use EFS?:
+Share files between multiple EC2 instances.
+Automatically increases storage when data grows.
+No need to manage storage manually.
+Highly available across multiple Availability Zones.
+
+
+
+Features:
+Shared file storage
+Supports multiple EC2 instances
+Auto Scales (No fixed size)
+Highly Available
+Fully Managed by AWS
+
+
+Uses NFS (Network File System) protocol
+EFS vs EBS
+EFS	EBS
+Shared Storage	Single EC2 Storage
+Multiple EC2 Instances	One EC2 Instance
+Auto Scales	Fixed Size
+File Storage	Block Storage
+
+
+Use Cases
+Web Applications
+Shared Application Files
+WordPress
+Content Management Systems
+Machine Learning
+Shared Logs
+
+
+
+Interview Questions
+What is EFS?
+
+EFS is a fully managed shared file storage service that allows multiple EC2 instances to access the same data simultaneously.
+
+Which protocol does EFS use?
+
+NFS (Network File System)
+
+What is the difference between EFS and EBS?
+EFS → Shared File Storage
+EBS → Block Storage attached to one EC2 instance
+
+
+Easy Way to Remember
+
+EFS = Shared Folder for Multiple EC2 Instances
