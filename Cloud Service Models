@@ -1,0 +1,163 @@
+Cloud Service Models:
+
+There are 3 Cloud Service Models:
+
+IaaS (Infrastructure as a Service)
+PaaS (Platform as a Service)
+SaaS (Software as a Service)
+
+
+
+1. IaaS (Infrastructure as a Service)
+
+What is IaaS?
+
+IaaS provides virtual servers, storage, and networking. You are responsible for installing and managing the operating system and applications.
+
+
+
+Simple Definition
+
+AWS gives you the infrastructure, and you manage everything else.
+
+
+
+Real-Life Example
+
+Imagine renting an empty apartment.
+
+The owner provides:
+
+Building
+Electricity
+Water
+
+You arrange:
+
+Furniture
+TV
+Kitchen
+Decorations
+
+👉 Similarly, AWS provides the infrastructure, and you configure the rest.
+
+AWS Examples
+EC2
+EBS
+VPC
+Elastic Load Balancer
+
+
+Who Manages What?
+AWS Manages	      You Manage
+Hardware	        Operating System
+Storage	          Applications
+Networking	      Software
+Virtualization   	Data
+
+
+Easy Keyword
+
+IaaS = Rent Infrastructure
+
+==================================================================================================================================
+
+
+2. PaaS (Platform as a Service)
+
+What is PaaS?
+
+PaaS provides a ready-to-use platform for developers. AWS manages the infrastructure and operating system, while you only deploy your application.
+
+
+
+Simple Definition
+
+AWS manages the infrastructure and OS. You only upload your application.
+
+
+
+Real-Life Example
+
+Imagine renting a fully furnished apartment.
+
+
+The owner provides:
+
+Furniture
+Kitchen
+Electricity
+Internet
+
+You simply move in and start living.
+
+👉 Similarly, developers only upload their application.
+
+
+AWS Examples
+Elastic Beanstalk
+AWS Lambda
+AWS App Runner
+
+
+Who Manages What?
+AWS Manages	       You Manage
+Hardware	         Application Code
+Operating System	 Application Data
+Runtime	
+Storage	
+
+
+
+Easy Keyword
+
+PaaS = Ready Platform
+
+============================================================================================================================================
+
+
+
+3. SaaS (Software as a Service)
+
+
+What is SaaS?
+
+SaaS provides a complete software application over the internet. You don't install or manage anything—just sign in and use it.
+
+
+
+Simple Definition
+
+Everything is managed by the service provider. You simply use the software.
+
+
+
+Real-Life Example
+
+Using Gmail.
+
+
+
+You don't manage:
+Servers
+Storage
+Updates
+Security
+
+You just log in and send emails.
+
+
+Examples
+Gmail
+Microsoft 365
+Zoom
+Dropbox
+Salesforce
+
+
+Who Manages What?
+Provider Manages	    You Manage
+Everything	          Your Data
+Easy Keyword
+
+SaaS = Ready Software
