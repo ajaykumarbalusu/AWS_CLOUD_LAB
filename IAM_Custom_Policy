@@ -1,0 +1,215 @@
+IAM Custom Policy
+
+
+What is an IAM Custom Policy?
+
+An IAM Custom Policy is a policy that you create to give specific permissions to IAM Users, Groups, or Roles.
+
+Simple Definition
+
+A Custom Policy allows you to define exactly what actions a user can or cannot perform in AWS.
+
+
+
+Why Do We Use Custom Policies?
+
+AWS provides many managed policies, but sometimes they give more permissions than required.
+
+A Custom Policy allows you to give only the required permissions (Principle of Least Privilege).
+
+
+
+Real-Life Example
+
+Imagine an office.
+
+Employee A should only view files.
+Employee B should view and edit files.
+Employee C should delete files.
+
+Instead of giving everyone full access, you create different permission rules.
+
+👉 This is exactly what a Custom Policy does.
+
+
+
+IAM Policy Structure
+
+A policy is written in JSON format.
+
+Basic structure:
+
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "s3:ListBucket",
+      "Resource": "*"
+    }
+  ]
+}
+
+
+
+Important Elements:
+
+1. Version
+
+Specifies the policy language version.
+
+"Version": "2012-10-17"
+
+Use this version for all new IAM policies.
+
+2. Statement
+
+Contains one or more permission rules.
+
+"Statement": [ ]
+
+3. Effect
+
+Defines whether the action is:
+
+Allow
+Deny
+
+Example:
+
+"Effect": "Allow"
+
+4. Action
+
+Specifies what the user can do.
+
+
+
+
+Examples:
+
+s3:GetObject
+s3:PutObject
+ec2:StartInstances
+ec2:StopInstances
+ec2:DescribeInstances
+5. Resource
+
+Specifies which AWS resource the policy applies to.
+
+Example:
+
+"Resource": "*"
+
+or
+
+"Resource": "arn:aws:s3:::my-bucket/*"
+Example 1 - Read Only S3 Access
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:GetObject",
+        "s3:ListBucket"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
+
+
+User can:
+
+View buckets
+Download files
+
+User cannot:
+
+Upload files
+Delete files
+
+
+
+Example 2 - Start and Stop EC2
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ec2:StartInstances",
+        "ec2:StopInstances"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
+
+
+
+The user can:
+
+Start EC2
+Stop EC2
+
+
+
+The user cannot:
+Terminate EC2
+Create EC2
+Advantages of Custom Policies
+More secure
+Gives only required permissions
+Follows the Principle of Least Privilege
+Reduces accidental changes
+Managed Policy vs Custom Policy
+Managed Policy	Custom Policy
+Created by AWS	Created by You
+General permissions	Specific permissions
+Easy to use	More secure & flexible
+
+
+
+
+Interview Questions
+1. What is an IAM Custom Policy?
+
+An IAM Custom Policy is a JSON document created by the user to define specific permissions for IAM users, groups, or roles.
+
+2. Why do we use Custom Policies?
+
+To provide only the required permissions, improving security by following the Principle of Least Privilege.
+
+3. What are the main elements of an IAM Policy?
+Version --> Statement --> Effect -->Action --> Resource
+
+
+4. What is the difference between Allow and Deny?
+Allow → Grants permission.
+Deny → Explicitly blocks permission (takes precedence over Allow).
+Easy Memory Trick
+
+Think of an IAM policy as a permission slip.
+
+Version → Policy format
+Statement → Rules
+Effect → Allow or Deny
+Action → What can be done
+Resource → On which AWS resource
+
+
+⭐ Interview Tip
+
+Remember these 5 keywords in order:
+
+Version
+   ↓
+Statement
+   ↓
+Effect
+   ↓
+Action
+   ↓
+Resource
